@@ -1,13 +1,23 @@
 {
-  "name": "shadow-proto",
+  "name": "orion",
   "version": "0.0.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "start": "wrangler dev"
+    "dev": "wrangler dev --remote",
+    "start": "wrangler dev --remote",
+    "ngrok": "ngrok http 8787",
+    "register": "node src/register.js"
   },
   "devDependencies": {
+    "@cloudflare/ai": "^1.0.36",
+    "discord-interactions": "^3.4.0",
+    "dotenv": "^16.3.1",
+    "ngrok": "^5.0.0-beta.2",
     "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "itty-router": "^4.0.23"
   }
 }
